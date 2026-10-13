@@ -83,7 +83,7 @@ Pada database, kedua jenis tanaman disimpan dalam satu tabel `tanaman`. Kolom `k
 
 7. **Menu 5 - Keluar**
 
-
+<img width="613" height="276" alt="Screenshot 2026-10-13 220022" src="https://github.com/user-attachments/assets/7c80ce22-8b94-4797-9d13-c3f704ad2ff9" />
 
    Program menampilkan pesan perpisahan, perulangan berhenti, dan `Scanner` ditutup melalui `view.tutup()`.
 
