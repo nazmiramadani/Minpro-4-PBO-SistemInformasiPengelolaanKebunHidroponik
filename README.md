@@ -48,18 +48,13 @@ Pada database, kedua jenis tanaman disimpan dalam satu tabel `tanaman`. Kolom `k
 
 2. **Menu Utama**
 
-   ```
-   === Sistem Informasi Pengelolaan Kebun Hidroponik ===
-   1. Tambah Tanaman
-   2. Tampilkan Tanaman
-   3. Update Tanaman
-   4. Hapus Tanaman
-   5. Keluar
-   ```
+ <img width="589" height="163" alt="image" src="https://github.com/user-attachments/assets/1219c32e-28b4-452c-8a57-e6c59e7e8371" />
 
    Menu ditampilkan berulang sampai pengguna memilih menu 5 (Keluar). Jika pilihan di luar 1-5, program menampilkan pesan error dan kembali ke menu.
 
 3. **Menu 1 - Tambah Tanaman**
+
+<img width="568" height="342" alt="image" src="https://github.com/user-attachments/assets/fe78f5e3-0c65-4049-af7d-15c0117e64de" />
 
    Pengguna memasukkan ID (angka, minimal 1). Controller mengecek ke database apakah ID sudah digunakan; jika sudah, proses dibatalkan dengan pesan error. Jika belum, pengguna mengisi nama, grade, dan sistem irigasi, lalu memilih kategori:
    * **1 (Sayur)**: input tingkat kerenyahan dan masa simpan (hari, minimal 1).
@@ -70,21 +65,27 @@ Pada database, kedua jenis tanaman disimpan dalam satu tabel `tanaman`. Kolom `k
 
 4. **Menu 2 - Tampilkan Tanaman**
 
+<img width="830" height="753" alt="image" src="https://github.com/user-attachments/assets/ebe9e78e-1798-4a5d-aace-1c6b5a6d5e5a" />
+
    Controller meminta seluruh data ke DAO (`SELECT`), lalu `View` menampilkan setiap tanaman beserta informasi umum, informasi khusus sesuai jenisnya, estimasi masa panen, perawatan khusus, nutrisi, dan jadwal penyiraman. Jika tabel kosong, ditampilkan pesan "Data tanaman kosong."
 
 5. **Menu 3 - Update Tanaman**
+
+<img width="484" height="278" alt="image" src="https://github.com/user-attachments/assets/2a282fc9-2fcc-4177-8c1b-0782df08cec4" />
 
    Pengguna memasukkan ID tanaman yang ingin diubah. Jika ID tidak ditemukan di database, muncul pesan error. Jika ditemukan, pengguna mengisi data baru (nama, grade, sistem irigasi) dan data khusus sesuai kategori. Nilai baru dipasang ke objek melalui setter (sehingga tetap tervalidasi), lalu objek dikirim ke DAO untuk disimpan dengan query `UPDATE`. ID dan kategori tanaman tidak dapat diubah.
 
 6. **Menu 4 - Hapus Tanaman**
 
+<img width="525" height="187" alt="image" src="https://github.com/user-attachments/assets/20a3fac1-8fc4-40df-927d-cae953eb824a" />
+
    Pengguna memasukkan ID tanaman yang ingin dihapus. DAO menjalankan query `DELETE` dan mengembalikan `true` jika ada data yang terhapus, atau `false` jika ID tidak ditemukan (muncul pesan error).
 
 7. **Menu 5 - Keluar**
 
-   Program menampilkan pesan perpisahan, perulangan berhenti, dan `Scanner` ditutup melalui `view.tutup()`.
 
-> **Catatan:** tambahkan screenshot tampilan program (menu utama, tambah, tampil, update, hapus) dan isi tabel `tanaman` pada database di bagian ini.
+
+   Program menampilkan pesan perpisahan, perulangan berhenti, dan `Scanner` ditutup melalui `view.tutup()`.
 
 ## Penjelasan Penerapan Encapsulation dan Inheritance
 
