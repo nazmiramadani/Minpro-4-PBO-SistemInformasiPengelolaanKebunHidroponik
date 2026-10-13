@@ -11,7 +11,7 @@ import model.Tanaman;
 import model.TanamanBuah;
 import model.TanamanSayur;
 
-public class TanamanDAOImpl implements TanamanDAO {
+public class TanamanDAOCRUD implements TanamanDAO {
 
 //TAMBAH
     @Override
@@ -31,7 +31,7 @@ public class TanamanDAOImpl implements TanamanDAO {
         }
     }
 
-//BACA
+//LIHAT
     @Override
     public ArrayList<Tanaman> ambilSemuaTanaman() throws SQLException {
         ArrayList<Tanaman> daftar = new ArrayList<>();

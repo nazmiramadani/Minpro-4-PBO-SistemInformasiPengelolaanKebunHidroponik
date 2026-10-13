@@ -1,7 +1,7 @@
 package controller;
 
 import dao.TanamanDAO;
-import dao.TanamanDAOImpl;
+import dao.TanamanDAOCRUD;
 import java.sql.SQLException;
 import model.Tanaman;
 import model.TanamanBuah;
@@ -13,7 +13,7 @@ public class TanamanController {
     private TanamanView view;
 
     public TanamanController(TanamanView view) {
-        this.tanamanDAO = new TanamanDAOImpl();
+        this.tanamanDAO = new TanamanDAOCRUD();
         this.view = view;
     }
 
