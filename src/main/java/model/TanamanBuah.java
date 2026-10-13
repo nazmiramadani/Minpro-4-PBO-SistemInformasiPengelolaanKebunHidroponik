@@ -15,10 +15,6 @@ public class TanamanBuah extends Tanaman implements PerawatanTanaman {
         setBerbiji(berbiji);
     }
 
-    public TanamanBuah(int idTanaman, String namaTanaman, String gradeTanaman, String sistemIrigasi) {
-        this(idTanaman, namaTanaman, gradeTanaman, sistemIrigasi, 8, false);
-    }
-
     public double getSkalaBrix() {
         return skalaBrix;
     }

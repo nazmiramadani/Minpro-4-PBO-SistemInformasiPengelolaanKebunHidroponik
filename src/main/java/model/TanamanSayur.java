@@ -13,10 +13,6 @@ public class TanamanSayur extends Tanaman implements PerawatanTanaman {
         setMasaSimpan(masaSimpan);
     }
 
-    public TanamanSayur(int idTanaman, String namaTanaman, String gradeTanaman, String sistemIrigasi) {
-        this(idTanaman, namaTanaman, gradeTanaman, sistemIrigasi, "Standar", 7);
-    }
-
     public String getTingkatKerenyahan() {
         return tingkatKerenyahan;
     }
